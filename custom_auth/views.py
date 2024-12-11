@@ -25,7 +25,7 @@ class LoginAPI(APIView):
             return Response(
                 {
                     "status": status.HTTP_404_NOT_FOUND,
-                    "data": serializer.error,
+                    "data": serializer.errors,
                 }
             )
         username = serializer.data["username"]
